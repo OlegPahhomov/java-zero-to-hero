@@ -6,6 +6,7 @@ import java.util.List;
 public class WordFilter {
 
     //todo fix tests
+    // done during streams lecture
 
     public List<Word> getNouns(List<Word> words) {
         return words;

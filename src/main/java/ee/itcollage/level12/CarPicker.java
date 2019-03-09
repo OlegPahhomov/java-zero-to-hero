@@ -8,6 +8,7 @@ public class CarPicker {
 
     public static void main(String[] args) {
         //todo 3 simulate picking a car
+        // done during streams lecture
 
         List<Car> garage = Arrays.asList(
                 buildCar("Lamborgini Avendator", 2000000, false, 10.0),

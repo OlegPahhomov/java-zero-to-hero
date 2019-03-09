@@ -2,8 +2,13 @@ package ee.itcollage.level1;
 
 public class Ferrari {
 
-    public void drive(){
+    public static void examine(){
+        System.out.println("WOOOOW");
+    }
+
+    public String drive(){
         System.out.println("RRRRRRRRRRR");
+        return "RRRRRRRRRRR";
     }
 
     public void stop(){
@@ -11,6 +16,10 @@ public class Ferrari {
     }
 
     public void drift(){
-        //todo ?
+        System.out.println("DRDRDRRRRRRRRRRRRRRR");
+    }
+
+    public void jump(){
+        System.out.println("NOOOO");
     }
 }
