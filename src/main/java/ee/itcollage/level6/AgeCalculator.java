@@ -13,6 +13,7 @@ public class AgeCalculator {
 
         // todo calculate and print which year person was born in
         // todo if person is 18+ ask them whether they have coded java
-        // todo if yes, do sth, if no, do sth else
+        // todo if yes, print respect, if no, print good luck
+        // todo we will use scanner only in this project, but it's a new thing you can google about a bit
     }
 }

@@ -1,5 +1,6 @@
-package ee.itcollage.level4;
+package ee.itcollage.level5;
 
+import ee.itcollage.level5.SumOfNumbers;
 import org.junit.Test;
 
 import java.util.ArrayList;

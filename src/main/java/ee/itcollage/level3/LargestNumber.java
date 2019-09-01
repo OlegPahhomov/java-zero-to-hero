@@ -1,6 +1,6 @@
 package ee.itcollage.level3;
 
-public class LargestNumbest {
+public class LargestNumber {
 
     //todo make tests work
 

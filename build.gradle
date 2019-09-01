@@ -4,7 +4,7 @@ apply plugin: 'maven'
 group = 'ee.taltech.itcolledge'
 version = '1.0-SNAPSHOT'
 
-description = """java-introduction"""
+description = """java-zero-to-hero"""
 
 sourceCompatibility = 11
 targetCompatibility = 11
