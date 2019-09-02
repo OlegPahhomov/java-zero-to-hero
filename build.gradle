@@ -8,9 +8,9 @@ description = """java-zero-to-hero"""
 
 sourceCompatibility = 11
 targetCompatibility = 11
+compileJava.options.encoding = 'UTF-8'
 
 repositories {
-        
      maven { url "https://repo.maven.apache.org/maven2" }
 }
 dependencies {
