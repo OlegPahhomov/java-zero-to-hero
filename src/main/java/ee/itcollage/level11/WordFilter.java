@@ -27,7 +27,12 @@ public class WordFilter {
     }
 
     public Word getFirstOfType(List<Word> words, Word.WordType type) {
-        return words.get(0);
+        for (Word word : words) {
+            if (word.getWordType().equals(type)){
+                return word;
+            }
+        }
+        return null;
     }
 
     public List<Word> getAllNotNouns(List<Word> words) {
