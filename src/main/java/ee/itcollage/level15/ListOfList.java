@@ -1,5 +1,6 @@
 package ee.itcollage.level15;
 
+import java.util.Collection;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
@@ -16,6 +17,10 @@ public class ListOfList {
     //Only streams are allowed
     //Read about Stream::flatmap()
     public static List<Integer> findFirst20NumbersDividableBy7() {
-        return null;
+        return numbers.stream()
+                .flatMap(Collection::stream)
+                .filter(number -> number % 7 == 0)
+                .limit(20)
+                .collect(Collectors.toList());
     }
 }

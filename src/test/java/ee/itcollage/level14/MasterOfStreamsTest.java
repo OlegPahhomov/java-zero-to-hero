@@ -9,8 +9,6 @@ import static org.junit.Assert.assertEquals;
 
 public class MasterOfStreamsTest {
 
-
-
     @Test
     public void checkConverted() {
         assertEquals(MasterOfStreams.convertMe(), MasterOfStreams.converted());
