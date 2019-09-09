@@ -2,6 +2,7 @@ package ee.itcollage.level12;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
 import java.util.Scanner;
 
 public class CarPicker {
@@ -22,15 +23,34 @@ public class CarPicker {
         //todo 3.2 Ask user how much money do they have and pick them a car or cars based on cars you have in garage
         // uncomment following lines for reading input example
         Scanner scanner = new Scanner(System.in);
-        //System.out.println("How much money do you have?");
-        //String input = scanner.nextLine();
-        //System.out.println("Your input: " + input);
+        System.out.println("How much money do you have?");
+        String input = scanner.nextLine();
+        System.out.println("Your input: " + input);
+        Integer money = Integer.valueOf(input);
+
+        System.out.println("What rating do you want?");
+        String input2 = scanner.nextLine();
+        System.out.println("Your input: " + input2);
+        Double rating = Double.valueOf(input2);
 
 
-        Car car = garage.get(0);
+        System.out.println("Do you want your car to be electric?");
+        String input3 = scanner.nextLine();
+        System.out.println("Your input: " + input3);
+        boolean electric = Boolean.valueOf(input2);
 
-        System.out.println("\n");
-        System.out.println("Shop recommends you: " + car);
+        Optional<Car> shopCarOp = garage.stream()
+                .filter(car -> car.getCost() < money)
+                .filter(car -> car.getUserRating() > rating)
+                .filter(car -> car.isElectric() == electric)
+                .findAny();
+
+        if (shopCarOp.isPresent()) {
+            System.out.println("Shop recommends you: ");
+            System.out.println(shopCarOp.get().getModel());
+        } else {
+            System.out.println("no car found change params");
+        }
 
         //todo ADVANCED
         // ask user 2nd question (+rating)

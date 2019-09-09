@@ -5,6 +5,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
+import static org.apache.commons.collections4.IterableUtils.isEmpty;
+
 public class PalindromeWords {
 
     //todo write a program to analyze palindrome words
@@ -17,13 +19,17 @@ public class PalindromeWords {
      * cow (reversed woc) is not a palindrome
      */
     public AnalysisResult analyzePalindromes(List<String> strings) {
+        if (isEmpty(strings)){
+            return new AnalysisResult(new ArrayList<>(), new ArrayList<>());
+        }
         List<String> palindrome = new ArrayList<>();
         List<String> otherWords = new ArrayList<>();
+
         for (String string : strings) {
             if (string.equals(reversedString(string))) {
                 palindrome.add(string);
             } else {
-                palindrome.add(string);
+                otherWords.add(string);
             }
         }
 
