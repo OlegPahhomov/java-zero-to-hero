@@ -8,11 +8,22 @@ public class WordFilter {
     //todo fix tests
 
     public List<Word> getNouns(List<Word> words) {
-        return words;
+        List<Word> nouns = new ArrayList<>();
+        for (Word word : words) {
+            if (word.getWordType().isNoun()){
+                nouns.add(word);
+            }
+        }
+        return nouns;
     }
 
     public Word getFirstVerb(List<Word> words) {
-        return words.get(0);
+        for (Word word : words) {
+            if (word.getWordType().isVerb()){
+                return word;
+            }
+        }
+        return null;
     }
 
     public Word getFirstOfType(List<Word> words, Word.WordType type) {

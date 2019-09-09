@@ -7,6 +7,22 @@ public class Word {
 
     enum WordType {
         NOUN, VERB, ADJECTIVE, OTHER;
+
+        public boolean isNoun(){
+            return this == NOUN;
+        }
+
+        public boolean isVerb(){
+            return this == VERB;
+        }
+
+        public boolean isAdjective(){
+            return this == ADJECTIVE;
+        }
+
+        public boolean isOther(){
+            return this == OTHER;
+        }
     }
 
     public Word(String word, WordType wordType) {
