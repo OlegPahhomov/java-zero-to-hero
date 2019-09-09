@@ -1,5 +1,7 @@
 package ee.itcollage.level11;
 
+import java.util.StringJoiner;
+
 public class Word {
 
     private String word;
@@ -44,5 +46,13 @@ public class Word {
 
     public void setWordType(WordType wordType) {
         this.wordType = wordType;
+    }
+
+    @Override
+    public String toString() {
+        return new StringJoiner(", ", Word.class.getSimpleName() + "[", "]")
+                .add("word='" + word + "'")
+                .add("wordType=" + wordType)
+                .toString();
     }
 }
