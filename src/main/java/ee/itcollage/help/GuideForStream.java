@@ -1,18 +1,15 @@
 package ee.itcollage.help;
 
-import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-public class FirstStream {
+public class GuideForStream {
 
     public static void main(String[] args) {
-        //todo we will learn this in future lectures, added here for completeness sake
-
-        List<Integer> ints = Arrays.asList(-2, -1, 0, 0, 0, 1, 2);
+        List<Integer> ints = List.of(-2, -1, 0, 0, 0, 1, 2);
         System.out.println(ints);
 
         //collect back to new list
@@ -31,7 +28,7 @@ public class FirstStream {
         List<Integer> squares = ints.stream().map(integer -> integer * integer).collect(Collectors.toList());
         System.out.println(squares);
 
-        //create a map of value and square pares
+        //create a map of value and square pairs
         Map<Integer, Integer> map = ints.stream().distinct().collect(Collectors.toMap((integer -> integer), (integer -> integer * integer)));
         System.out.println(map);
 

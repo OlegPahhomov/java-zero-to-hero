@@ -3,10 +3,9 @@ package ee.itcollage.help;
 import java.util.HashMap;
 import java.util.Map;
 
-public class FirstMap {
+public class GuideForMap {
 
     public static void main(String[] args) {
-
         //creating
         Map<Integer, String> map = new HashMap<>();
 
@@ -29,6 +28,7 @@ public class FirstMap {
             System.out.println(entry.getKey() + ":" + entry.getValue());
         }
 
+        //removing
         map.remove(1);
 
         for (Map.Entry<Integer, String> entry : map.entrySet()) {
