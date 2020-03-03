@@ -15,4 +15,11 @@ public class Ferrari {
     }
 
     //todo create more methods
+
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder("Ferrari{");
+        sb.append('}');
+        return sb.toString();
+    }
 }
