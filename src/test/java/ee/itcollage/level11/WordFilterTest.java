@@ -1,13 +1,12 @@
 package ee.itcollage.level11;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 
 public class WordFilterTest {
 
@@ -15,7 +14,7 @@ public class WordFilterTest {
 
     private String sentence = "The quick brown fox jumps over the lazy dog and laughs";
     //todo you can read more about our sentence here: https://en.wikipedia.org/wiki/The_quick_brown_fox_jumps_over_the_lazy_dog
-    private List<Word> words = Arrays.asList(
+    private List<Word> words = List.of(
             new Word("the", Word.WordType.OTHER),
             new Word("quick", Word.WordType.ADJECTIVE),
             new Word("brown", Word.WordType.ADJECTIVE),
@@ -65,7 +64,7 @@ public class WordFilterTest {
     @Test
     public void getNounStrings() {
         List<String> nounStrings = filter.getNounStrings(words);
-        assertEquals(Arrays.asList("fox", "dog"), nounStrings);
+        assertEquals(List.of("fox", "dog"), nounStrings);
     }
 
     @Test

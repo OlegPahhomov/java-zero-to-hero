@@ -9,7 +9,7 @@ public class CarPicker {
     public static void main(String[] args) {
         //todo 3 simulate picking a car
 
-        List<Car> garage = Arrays.asList(
+        List<Car> garage = List.of(
                 buildCar("Lamborgini Avendator", 2000000, false, 10.0),
                 buildCar("Tesla Roadster", 100000, true, 9.0),
                 buildCar("Toyota Prius", 20000, false, 5.0),

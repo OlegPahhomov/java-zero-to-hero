@@ -1,19 +1,40 @@
-apply plugin: 'java'
-apply plugin: 'maven'
+plugins {
+    id 'java'
+}
 
-group = 'ee.taltech.itcolledge'
-version = '1.0-SNAPSHOT'
+group 'ee.taltech'
+version '1'
 
-description = """java-zero-to-hero"""
-
-sourceCompatibility = 11
-targetCompatibility = 11
+sourceCompatibility = "${java_version}"
+sourceCompatibility = "${java_version}"
 compileJava.options.encoding = 'UTF-8'
 
 repositories {
-     maven { url "https://repo.maven.apache.org/maven2" }
+    mavenCentral()
 }
+
 dependencies {
-    compile group: 'com.google.guava', name: 'guava', version:'27.0.1-jre'
-    testCompile group: 'junit', name: 'junit', version:'4.12'
+    compile group: 'com.google.guava', name: 'guava', version: "${guava_version}"
+
+    testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter-api', version: "${junit_version}"
+    testRuntimeOnly group: 'org.junit.jupiter', name: 'junit-jupiter-engine', version: "${junit_version}"
+}
+
+test {
+    useJUnitPlatform()
+
+    testLogging {
+        events "passed", "skipped", "failed" //, "standardOut", "standardError"
+
+        showExceptions true
+        exceptionFormat "full"
+        showCauses true
+        showStackTraces true
+
+        showStandardStreams = false
+    }
+}
+
+wrapper {
+    gradleVersion = "${gradle_wrapper_version}"
 }
