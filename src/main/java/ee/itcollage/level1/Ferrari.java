@@ -11,8 +11,14 @@ public class Ferrari {
     }
 
     public void drift(){
+        System.out.println("EEEEEEHHH");
         //todo add method body
     }
 
     //todo create more methods
+    public void autopilot(){
+        System.out.println("autopilot engaged");
+        //todo add method body
+    }
+
 }
