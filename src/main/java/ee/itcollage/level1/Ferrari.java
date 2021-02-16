@@ -21,4 +21,8 @@ public class Ferrari {
         //todo add method body
     }
 
+    @Override
+    public String toString() {
+        return "Ferrari{}";
+    }
 }
