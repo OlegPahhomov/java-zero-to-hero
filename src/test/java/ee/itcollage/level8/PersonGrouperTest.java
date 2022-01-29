@@ -1,22 +1,22 @@
 package ee.itcollage.level8;
 
-import com.google.common.collect.Lists;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.util.List;
 import java.util.Map;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNull;
 
-public class PersonGrouperTest {
+class PersonGrouperTest {
 
-    public static List<Person> testPeople = Lists.newArrayList(
+    static List<Person> testPeople = List.of(
             new Person("11111", "Great", "President"),
             new Person("22222", "Donald", "Duck"),
             new Person("33333", "Cristiano", "Ronaldo"));
 
     @Test
-    public void grouping_people_by_id_code_divides_them_to_id_code_and_person_pairs() {
+    void grouping_people_by_id_code_divides_them_to_id_code_and_person_pairs() {
         Map<String, Person> map = PersonGrouper.groupPeopleByIdCode(testPeople);
         assertEquals(3, map.size());
         assertNull(map.get("-1"));

@@ -1,13 +1,13 @@
 package ee.itcollage.level9;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class StringMakerTest {
+class StringMakerTest {
 
     @Test
-    public void xStrings() {
+    void xStrings() {
         assertEquals("", StringMaker.make(":)", 0));
         assertEquals("", StringMaker.make(":P", -5));
 
@@ -19,7 +19,7 @@ public class StringMakerTest {
     }
 
     @Test
-    public void xyStrings() {
+    void xyStrings() {
         assertEquals("", StringMaker.make("-", 0, "x", 0));
         assertEquals("--", StringMaker.make("-", 2, "x", 0));
         assertEquals("--", StringMaker.make("-", 2, "x", -2));

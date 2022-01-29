@@ -2,3 +2,6 @@
 .idea
 java-introduction.iml
 target/
+.gradle
+build
+out

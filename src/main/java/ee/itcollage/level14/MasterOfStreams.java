@@ -6,8 +6,7 @@ import java.util.Map;
 
 public class MasterOfStreams {
 
-    private static List<Integer> nums = List.of(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
-
+    private static final List<Integer> nums = List.of(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
 
     public static List<Integer> convertMe() {
         List<Integer> result = new ArrayList<>();
