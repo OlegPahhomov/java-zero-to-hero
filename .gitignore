@@ -1,5 +1,7 @@
-# Created by .ignore support plugin (hsz.mobi)
 .idea
+.gradle
+gradle
+build
 java-introduction.iml
 target/
 .gradle

@@ -17,7 +17,7 @@ public class GuideForList {
         //more pro is to
         List<Integer> numbers2 = List.of(1, 2, 3);
         //pre Java-11 it looked like
-        List<Integer> numbers3 = Arrays.asList(1, 2, 3);
+        List<Integer> numbers3 = List.of(1, 2, 3);
 
         //foreach iteration
         //idea type iter and tab
