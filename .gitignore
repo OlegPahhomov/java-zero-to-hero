@@ -1,9 +1,6 @@
 .idea
 .gradle
-gradle
 build
 java-introduction.iml
 target/
-.gradle
-build
 out
