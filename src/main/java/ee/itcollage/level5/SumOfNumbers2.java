@@ -2,7 +2,7 @@ package ee.itcollage.level5;
 
 import java.util.List;
 
-public class SumOfNumbers {
+public class SumOfNumbers2 {
 
     //todo make tests work
     public static Integer sum(List<Integer> integerList) {
