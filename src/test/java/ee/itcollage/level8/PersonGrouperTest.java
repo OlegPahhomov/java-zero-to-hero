@@ -10,14 +10,14 @@ import static org.junit.jupiter.api.Assertions.assertNull;
 
 class PersonGrouperTest {
 
-    static List<Person> testPeople = List.of(
+    private static final List<Person> TEST_PEOPLE = List.of(
             new Person("11111", "Great", "President"),
             new Person("22222", "Donald", "Duck"),
             new Person("33333", "Cristiano", "Ronaldo"));
 
     @Test
     void grouping_people_by_id_code_divides_them_to_id_code_and_person_pairs() {
-        Map<String, Person> map = PersonGrouper.groupPeopleByIdCode(testPeople);
+        Map<String, Person> map = PersonGrouper.groupPeopleByIdCode(TEST_PEOPLE);
         assertEquals(3, map.size());
         assertNull(map.get("-1"));
         Person person1 = map.get("11111");
